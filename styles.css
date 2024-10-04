@@ -1,0 +1,65 @@
+body {
+    background-image: url('pastel.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Mantiene la proporción y cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+}
+
+.balloons {
+    position: relative;
+    height: 150px; /* Aumenté la altura del contenedor para permitir más espacio */
+    margin: 20px 0;
+    overflow: hidden; /* Evita que los globos sobresalgan del contenedor */
+}
+
+.balloon {
+    position: absolute;
+    width: 60px; /* Tamaño reducido de los globos */
+    animation: float 5s ease-in-out infinite; /* Tiempo de animación ajustado */
+}
+
+.balloon:nth-child(1) {
+    left: 10%;
+    bottom: 0; /* Posición de fondo */
+    animation-delay: 0s;
+}
+
+.balloon:nth-child(2) {
+    left: 40%;
+    bottom: 0; /* Posición de fondo */
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    left: 70%;
+    bottom: 0; /* Posición de fondo */
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Ajusta la altura del movimiento */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.carousel-item img {
+    max-width: 80%; /* Tamaño reducido de las imágenes del carrusel */
+    height: auto;    /* Mantiene la proporción de aspecto */
+}
+
+.carousel-img {
+    max-width: 60%; /* Tamaño uniforme para todas las imágenes del carrusel */
+    height: auto;    /* Mantiene la proporción de aspecto */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
